@@ -1,8 +1,9 @@
 // Type definitions for micro 7.3
 // Project: https://github.com/zeit/micro
 // Definitions by: Kalle Ott <https://github.com/kaoDev>
+//               : Kazuya Gosho <https://github.com/acro5piano>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.2
+// TypeScript Version: 2.3
 
 import { IncomingMessage, ServerResponse, Server } from 'http';
 
@@ -23,4 +24,4 @@ export function buffer(req: IncomingMessage, info?: { limit?: string, encoding?:
 
 export function text(req: IncomingMessage, info?: { limit?: string, encoding?: string }): Promise<string>;
 
-export function json<T extends {} = {}>(req: IncomingMessage, info?: { limit?: string, encoding?: string }): Promise<T>;
+export function json<T = {}>(req: IncomingMessage, info?: { limit?: string, encoding?: string }): Promise<T>;
